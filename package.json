@@ -1,0 +1,16 @@
+{
+  "name": "city",
+  "version": "1.0.0",
+  "description": "A css city",
+  "repository": "git@github.com:patstockwell/css-city.git",
+  "author": "Patrick Stockwell <pat.stockwell@rea-group.com>",
+  "license": "MIT",
+  "dependencies": {
+    "browser-sync": "^2.26.3"
+  },
+  "scripts": {
+    "build-css": "node-sass --include-path scss scss/main.scss main.css",
+    "watch-css": "nodemon -e scss -x \"yarn build-css\"",
+    "reload": "browser-sync start --server --files \"*.css\" \"*.html\""
+  }
+}
