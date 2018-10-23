@@ -5,11 +5,120 @@
   display: flex; }
 
 .sky {
-  background-image: linear-gradient(#950064 6%, #EA6531 35%, white 74%); }
+  background-image: linear-gradient(#950064 6%, #EA6531 28%, white 74%); }
 
 .skyline-frame {
   height: 100%;
-  flex-grow: 1; }
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column; }
+  .skyline-frame .cloud-frame {
+    flex-basis: 50%; }
+  .skyline-frame .buildings-frame {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; }
+    .skyline-frame .buildings-frame .skyline {
+      flex-basis: 30%;
+      display: flex;
+      align-items: flex-end; }
+      .skyline-frame .buildings-frame .skyline .silouette {
+        height: 100%;
+        background-color: #211F29;
+        flex-basis: 30px;
+        margin-left: 9px; }
+      .skyline-frame .buildings-frame .skyline .silouette:nth-last-child(3n) {
+        height: 10px; }
+      .skyline-frame .buildings-frame .skyline .silouette:nth-last-child(4n+1) {
+        flex-basis: 15px; }
+      .skyline-frame .buildings-frame .skyline .silouette:nth-last-child(4n+2) {
+        height: 33px; }
+    .skyline-frame .buildings-frame .middle-ground {
+      flex-basis: 70%;
+      background-color: #211F29;
+      display: flex;
+      align-items: flex-end; }
+      .skyline-frame .buildings-frame .middle-ground .middle-building {
+        height: 160px;
+        flex-basis: 58px;
+        background-color: #5A5374;
+        margin-left: 23px; }
+      .skyline-frame .buildings-frame .middle-ground .middle-building:nth-last-child(odd) {
+        background-image: repeating-linear-gradient(#716C8C 2%, #5A5374 7%); }
+      .skyline-frame .buildings-frame .middle-ground .middle-building:nth-last-child(2n) {
+        height: 113px;
+        flex-basis: 40px; }
+      .skyline-frame .buildings-frame .middle-ground .middle-building:nth-last-child(1) {
+        height: 91px;
+        flex-basis: 70px;
+        margin-left: 40px; }
+      .skyline-frame .buildings-frame .middle-ground .middle-building:nth-last-child(4) {
+        height: 129px; }
+    .skyline-frame .buildings-frame .foreground {
+      flex-basis: 0px;
+      background-color: #211F29;
+      position: relative; }
+      .skyline-frame .buildings-frame .foreground .foreground-building {
+        height: 150px;
+        width: 123px;
+        position: absolute;
+        margin-left: 90px;
+        bottom: 0;
+        display: flex;
+        flex-direction: column; }
+        .skyline-frame .buildings-frame .foreground .foreground-building .facade-top {
+          flex-basis: 22px;
+          width: 93%;
+          margin: auto;
+          display: flex;
+          flex-direction: column; }
+          .skyline-frame .buildings-frame .foreground .foreground-building .facade-top .wide {
+            flex-grow: 0; }
+          .skyline-frame .buildings-frame .foreground .foreground-building .facade-top .facade {
+            width: 96%;
+            margin: 0 auto; }
+        .skyline-frame .buildings-frame .foreground .foreground-building .building-top {
+          width: 83%; }
+        .skyline-frame .buildings-frame .foreground .foreground-building .band {
+          flex-basis: 15px;
+          display: flex;
+          flex-direction: column; }
+          .skyline-frame .buildings-frame .foreground .foreground-building .band .middle {
+            flex-grow: 1;
+            background-color: #9894B0;
+            width: 93%;
+            margin: auto; }
+        .skyline-frame .buildings-frame .foreground .foreground-building .wide {
+          box-sizing: border-box;
+          flex-basis: 6px;
+          background-color: #767190;
+          border: 2px solid #4F4D5C; }
+        .skyline-frame .buildings-frame .foreground .foreground-building .facade {
+          flex-grow: 1;
+          background-color: #9894B0;
+          overflow: hidden;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-around; }
+          .skyline-frame .buildings-frame .foreground .foreground-building .facade .small-window {
+            width: 10px;
+            height: 10px;
+            margin: 3px;
+            background-color: #B7B2D0;
+            border-top: 2px solid #6B6782;
+            border-right: 2px solid #6B6782;
+            border-bottom: 2px solid #B1ACC8;
+            border-left: 2px solid #B1ACC8;
+            box-sizing: border-box; }
+          .skyline-frame .buildings-frame .foreground .foreground-building .facade .small-window:nth-last-child(11n) {
+            background-color: #413B57; }
+      .skyline-frame .buildings-frame .foreground .foreground-building:nth-last-child(1) {
+        margin-left: 270px;
+        height: 71px;
+        width: 138px; }
+      .skyline-frame .buildings-frame .foreground .foreground-building:nth-last-child(odd) {
+        background-image: repeating-linear-gradient(#9894B0 -12%, #5A5374 7%); }
 
 .building-wall {
   background-color: #A4A1BC;
@@ -26,11 +135,11 @@
   border-left: #323044 1px solid; }
 
 .window {
-  height: 55px;
-  width: 55px;
+  height: 57px;
+  width: 60px;
   display: flex;
   flex-direction: column;
-  margin: 10px 0 40px 50px; }
+  margin: 10px 0 40px 47px; }
   .window .top {
     border: black 2px solid;
     flex-basis: 6px;
@@ -53,7 +162,8 @@
       border-top: #2E2C41 4px solid;
       border-right: #2E2C41 1px solid;
       border-left: #2E2C41 2px solid;
-      overflow: hidden; }
+      overflow: hidden;
+      position: relative; }
       .window .middle .pane .reflection {
         height: 4px;
         background-image: linear-gradient(transparent, #9B97B3);
@@ -62,6 +172,26 @@
       .window .middle .pane .reflection:nth-last-child(1) {
         margin-top: 20px;
         height: 8px; }
+      .window .middle .pane .broken-pane-background {
+        background-color: black;
+        width: 49px;
+        height: 38px;
+        transform: rotate(60deg);
+        position: absolute;
+        z-index: 2; }
+      .window .middle .pane .shard {
+        background-color: #4F4C6F;
+        position: absolute;
+        height: 40px;
+        width: 30px;
+        transform: skewY(119deg) rotate(-13deg);
+        z-index: 3;
+        bottom: -46px;
+        right: 8px; }
+      .window .middle .pane #shard-two {
+        bottom: 50px;
+        left: 17px;
+        transform: skewY(128deg); }
   .window .over {
     width: 93%;
     border-top: black 2px solid;
