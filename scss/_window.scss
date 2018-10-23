@@ -9,6 +9,7 @@
     border: black 2px solid;
     flex-basis: 6px;
     box-sizing: border-box;
+    background-color: #4E4D5C;
   }
 
   & .middle {
@@ -27,23 +28,62 @@
 
     & .pane {
       background-color: #4F4C6F;
-      flex-basis: 70%;
+      flex-basis: 67%;
+      border-top: #2E2C41 4px solid;
+      border-right: #2E2C41 1px solid;
+      border-left: #2E2C41 2px solid;
+      overflow: hidden;
+
+      & .reflection {
+        height: 4px;
+        background-image: linear-gradient(transparent, #9B97B3);
+        margin-top: 3px;
+        transform: skewY(-45deg);
+      }
+
+      & .reflection:nth-last-child(1) {
+        margin-top: 20px;
+        height: 8px;
+      }
     }
+  }
+
+  & .over {
+    width: 93%;
+    border-top: black 2px solid;
+    border-right: black 2px solid;
+    border-left: black 2px solid;
+    flex-basis: 3px;
+    box-sizing: border-box;
+    margin: auto;
+    background-color: #4E4D5C;
+    margin-bottom: -2px;
+    z-index: 3;
   }
 
   & .bottom {
     border: black 2px solid;
-    flex-basis: 10px;
+    flex-basis: 6px;
     box-sizing: border-box;
+    background-color: #4E4D5C;
+
+    & .glistening-window-sill {
+      width: 50%;
+      height: 1px;
+      background-color: #A4A1BC;
+      margin-left: 3px;
+    }
   }
 
   & .under {
-    width: 90%;
+    width: 84%;
     border-bottom: black 2px solid;
     border-right: black 2px solid;
     border-left: black 2px solid;
     flex-basis: 3px;
     box-sizing: border-box;
     margin: auto;
+    background-color: #4E4D5C;
+    margin-top: -2px;
   }
 }
