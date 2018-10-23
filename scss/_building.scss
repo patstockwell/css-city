@@ -1,0 +1,16 @@
+.building-wall {
+  background-color: #A4A1BC;
+  height: 100%;
+  flex-basis: 43%;
+  flex-grow: 0;
+  border-left: #323044 6px solid;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.building-edge {
+  background-color: #85839B;
+  flex-basis: 9px;
+  border-left: #323044 1px solid;
+}
+

@@ -1,5 +1,5 @@
-.frame {
-  border: black 3px solid;
-  height: 400px;
-  width: 800px;
-}
+@import 'border';
+@import 'sky';
+@import 'city-skyline';
+@import 'building';
+@import 'window';
